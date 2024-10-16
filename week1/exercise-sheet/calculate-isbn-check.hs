@@ -1,7 +1,9 @@
 module Main where
 
-isbnCheck :: [Int] -> Int
-isbnCheck isbn = 11 - (sum [x*y | (x, y) <- zip isbn (reverse [2..10])] `mod` 11)
+isbnCheck :: [Int] -> String
+isbnCheck isbn = if check == 10 then "X" else show check
+    where
+        check = 11 - (sum [x*y | (x, y) <- zip isbn (reverse [2..10])] `mod` 11)
 
 main :: IO ()
 main = do
