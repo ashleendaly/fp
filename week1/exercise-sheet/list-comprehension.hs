@@ -4,10 +4,10 @@ triangles :: Int-> [Int]
 triangles n = [(x * (x+1)) `div` 2 | x <- [1..n]] 
 
 primes :: Int-> [Int]
-primes n = [x | x <- [1..n], n `mod` x == 0]
+primes n = [x | x <- [2..n], null [y | y <- [2..(x-1)], x `mod` y == 0]]
 
-flatten :: [[a]]-> a
-flatten to_flatten = []
+flatten :: [[a]]-> [a]
+flatten to_flatten = [x | xs <- to_flatten, x <- xs]
 
 main :: IO ()
 main = do
