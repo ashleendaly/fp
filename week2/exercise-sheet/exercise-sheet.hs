@@ -26,13 +26,13 @@ twice f x = f (f x)
  x supplied as arguments too)
 --}
 
-ntimes :: (a->a) -> Int -> a -> a
-ntimes f 0 x = x
-ntimes f n x =  ntimes f (n-1) (f x)
+-- ntimes :: (a->a) -> Int -> a -> a
+-- ntimes f 0 x = x
+-- ntimes f n x =  ntimes f (n-1) (f x)
 
 
-prop_addm :: Int -> Bool
-prop_addm = \m -> if m<0 then True else ntimes (+1) m 0 == m
+-- prop_addm :: Int -> Bool
+-- prop_addm = \m -> if m<0 then True else ntimes (+1) m 0 == m
 
 -- ^^^^^ can you quickCheck this property?
 
@@ -154,3 +154,9 @@ dfs_preorder (Node x left right) = show x ++ " " ++ dfs_preorder left ++ dfs_pre
 dfs_inorder :: Tree -> String
 dfs_inorder Leaf = ""
 dfs_inorder (Node x left right) = dfs_inorder left ++ show x ++ " " ++ dfs_inorder right
+
+ntimes :: [Char] -> Int -> [Char]
+ntimes word 0 = ""
+ntimes word n = word ++ ntimes word (n-1)
+
+prop_ntimesLength word n = length (ntimes word n) == n * length word
