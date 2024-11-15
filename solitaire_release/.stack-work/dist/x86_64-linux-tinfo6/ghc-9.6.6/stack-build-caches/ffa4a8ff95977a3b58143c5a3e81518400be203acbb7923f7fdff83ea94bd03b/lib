@@ -1,0 +1,20 @@
+/home/ash/.stack/programs/x86_64-linux/ghc-tinfo6-9.6.6/lib/ghc-9.6.6/lib/x86_64-linux-ghc-9.6.6/rts-1.0.2/include/ghcversion.h:
+  hash: 9032f6afc97dcddfe8c8b306639eb6f456e3f6667f3dd8268681f51bb77c8634
+/home/ash/uni/fp/solitaire_release/.stack-work/dist/x86_64-linux-tinfo6/ghc-9.6.6/build/autogen/Paths_solitaire.hs:
+  hash: 235f2ee1c85e334de61edaa86cc54e36a412ef21b1590ed08b48437e8772b909
+/home/ash/uni/fp/solitaire_release/.stack-work/dist/x86_64-linux-tinfo6/ghc-9.6.6/build/autogen/cabal_macros.h:
+  hash: fd26690d5ddff9e207124ff0de3310f437bdba700b7cb79aaf60b3037cb0bf08
+/home/ash/uni/fp/solitaire_release/package.yaml:
+  hash: 33fef07cfe0af095fb5ec01092c21ac94c5427c130c9ca812d8eb31ca90ea5af
+/home/ash/uni/fp/solitaire_release/solitaire.cabal:
+  hash: 8da23b251dc95752deaab8f73a65b380a5c7d7158b3a8fd8dfcabb07a08dec66
+/home/ash/uni/fp/solitaire_release/src/CommandParser.hs:
+  hash: 4f51ba34bc3ccad06b082b89c98800e6903278e8f78541a706d75e6539de2ed6
+/home/ash/uni/fp/solitaire_release/src/Deck.hs:
+  hash: cc63f468814513fadc2a289ac7c5530775ea27bbfee19b07a2b14368ad774c35
+/home/ash/uni/fp/solitaire_release/src/Error.hs:
+  hash: 333314131354141ceaadd0687de13f62cb5e7abc9f710874dc3114bfd76c0989
+/home/ash/uni/fp/solitaire_release/src/Game.hs:
+  hash: 046ee8d2b08456895762fb9c47e612a2a271c0851d4b093bbfaf134ece3e09d1
+/usr/include/stdc-predef.h:
+  hash: 8db4f65e62cade8ae4d9b77960ee6aee093255acc1b637e3fb37d79179733b15
