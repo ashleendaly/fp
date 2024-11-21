@@ -26,7 +26,7 @@ genRandoms :: StdGen -> Int -> [Int]
 genRandoms gen n | n <= 0 = []
                  | otherwise =
                      let (x, gen') = randomR (1 :: Int, 10 :: Int) gen in
-                     x : (genRandoms gen' (n - 1))
+                     x : genRandoms gen' (n - 1)
 
 seedRNG :: IO StdGen
 seedRNG = do

@@ -70,9 +70,31 @@ deckCorrect deck = sort deck == sort deckOf52
 {- Shuffling -}
 
 {- EXERCISE 2: Fisher-Yates Shuffle -}
-shuffle :: StdGen -> Deck -> Deck
--- shuffle rng deck = 
-shuffle rng deck = error "fill in 'shuffle' in Deck.hs"
+shuffle :: StdGen -> Deck -> Deck 
+shuffle rng deck = nShuffles rng deck (length deck)
+
+nShuffles :: StdGen -> Deck -> Int -> Deck
+nShuffles rng deck n 
+    | n <= 1 = deck
+    | otherwise =
+        nShuffles rng' (swap deck (n-1) x) (n-1)
+        where 
+            (x, rng') = randomR (0, n-1) rng
+
+swap :: [a] -> Int -> Int -> [a]
+swap deck i j
+    | i == j = deck
+    | otherwise = 
+        if i < j
+            then left ++ [elemJ] ++ middle ++ [elemI] ++ right
+            else left ++ [elemI] ++ middle ++ [elemJ] ++ right
+        where   
+            elemI = deck !! i
+            elemJ = deck !! j
+            left  = take (min i j) deck
+            middle = drop (min i j + 1) (take (max i j) deck)
+            right = drop (max i j + 1) deck
+
 
 {- shuffleDeck is called by Main.hs when setting up -}
 shuffleDeck :: IO Deck
