@@ -60,7 +60,7 @@ type Deck = [Card]
 
 {- EXERCISE 1: Deck Creation -}
 deckOf52 :: [Card]
-deckOf52 = [MkCard { cardSuit = suit, cardValue = value } | value <- [Ace .. King], suit <- [Spades, Clubs, Diamonds, Hearts]]
+deckOf52 = [MkCard { cardSuit = suit, cardValue = value } | suit <- [Spades, Clubs, Diamonds, Hearts], value <- [Ace .. King]]
 
 {- You can use this to check whether your shuffled deck contains the correct
  - cards -}
